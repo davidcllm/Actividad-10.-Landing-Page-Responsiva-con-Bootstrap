@@ -1,0 +1,12 @@
+/* Configuración de la sección Hero con una imagen de fondo */
+.hero {
+    /* linear-gradient aplica */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),  url('https://images.unsplash.com/photo-1603048297172-c92544798d5e?w=1920&q=80') center center / cover no-repeat;
+    min-height: 80vh; 
+}
+
+/* Ajuste para que todas las imágenes de las tarjetas (cards) tengan la misma altura sin deformarse */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
