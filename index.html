@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroGroove - Tienda de Vinilos</title>
+    
+    <!-- CSS de Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold" href="#">RetroGroove</a>
+            <!-- Botón para dispositivos móviles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <header class="hero d-flex align-items-center text-white text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">El sonido clásico nunca muere</h1>
+            <p class="lead mb-5 fs-4">Descubre nuestra exclusiva colección de discos de vinilo de todas las épocas y géneros.</p>
+            <a href="#catalogo" class="btn btn-warning btn-lg fw-bold px-5 rounded-pill">Ver Colección</a>
+        </div>
+    </header>
+
+    <!-- Tarjetas de información (Cards + Grid) -->
+    <section id="catalogo" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Nuestro Catálogo</h2>
+            <p class="text-muted">Explora nuestras categorías más populares</p>
+        </div>
+
+        <!-- Sistema Grid de Bootstrap: 1 columna en móvil, 3 en escritorio -->
+        <div class="row g-4">
+            
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1538688423619-a81d3f23454b?w=500&q=80" class="card-img-top" alt="Rock Clásico">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Rock Clásico</h5>
+                        <p class="card-text">Revive la época dorada con ediciones originales y remasterizadas de los grandes del rock.</p>
+                        <a href="#" class="btn btn-outline-dark mt-auto">Explorar sección</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&q=80" class="card-img-top" alt="Jazz & Blues">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Jazz & Blues</h5>
+                        <p class="card-text">Sumérgete en las improvisaciones y voces más profundas de la historia de la música.</p>
+                        <a href="#" class="btn btn-outline-dark mt-auto">Explorar sección</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=500&q=80" class="card-img-top" alt="Tornamesas">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Tornamesas y Accesorios</h5>
+                        <p class="card-text">Equipos de alta fidelidad, agujas, fundas protectoras y kits de limpieza profesionales.</p>
+                        <a href="#" class="btn btn-outline-dark mt-auto">Explorar sección</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Formulario de información de contacto -->
+    <section id="contacto" class="bg-light py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Contáctanos</h2>
+                        <p class="text-muted">¿Buscas algún disco en específico? Déjanos un mensaje.</p>
+                    </div>
+                    
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <!-- Formulario con clases de Bootstrap -->
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="nombre" class="form-label">Nombre completo</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="correo" class="form-label">Correo electrónico</label>
+                                        <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="asunto" class="form-label">Asunto</label>
+                                        <input type="text" class="form-control" id="asunto" placeholder="Ej. Pedido especial de disco" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="mensaje" class="form-label">Mensaje</label>
+                                        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-dark btn-lg px-5">Enviar Mensaje</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-light py-4 text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 RetroGroove Vinilos. Todos los derechos reservados.</p>
+            <p class="mb-0 text-muted small">Av. de la Música 123, Ciudad del Sonido.</p>
+        </div>
+    </footer>
+
+    <!-- JS de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>    
